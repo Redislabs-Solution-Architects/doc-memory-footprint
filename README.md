@@ -29,21 +29,21 @@ pip install -r requirements.txt
 - --format.  Output format for the table of consolidated results.  Options are text, html or markdown.  Default = text.
 ### Execution
 ```bash
-python3 test.py --format markdown
+python3 test.py --nkeys 200000 --format markdown
 ```
 ### Output
 Sample output for the test above.
 
-Consolidated Results - Num Keys:10000, Num Fields:10, Text Field Size:10, Numeric Field Size:10
+Consolidated Results - Num Keys:200000, Num Fields:10, Text Field Size:10, Numeric Field Size:10
 | Index Structure       |   Object Size(b) |   Index Size(mb) |
 |:----------------------|-----------------:|-----------------:|
-| Hash Text Unsorted    |              269 |             1.76 |
-| Hash Text Sorted      |              269 |             5    |
-| Hash Tag              |              269 |             1.1  |
-| Hash Numeric Unsorted |              249 |             1.63 |
-| Hash Numeric Sorted   |              249 |             3.92 |
-| JSON Text Unsorted    |              290 |             1.76 |
-| JSON Text Sorted      |              290 |             5    |
-| JSON Tag              |              290 |             1.1  |
-| JSON Numeric Unsorted |              190 |             1.63 |
-| JSON Numeric Sorted   |              190 |             3.92 |
+| Hash Text Unsorted    |              269 |            35.45 |
+| Hash Text Sorted      |              269 |           100.3  |
+| Hash Tag              |              269 |            22.29 |
+| Hash Numeric Unsorted |              241 |            33.12 |
+| Hash Numeric Sorted   |              241 |            78.9  |
+| JSON Text Unsorted    |              290 |            35.45 |
+| JSON Text Sorted      |              290 |           100.3  |
+| JSON Tag              |              290 |            22.29 |
+| JSON Numeric Unsorted |              190 |            33.14 |
+| JSON Numeric Sorted   |              190 |            78.91 |
