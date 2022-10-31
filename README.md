@@ -29,21 +29,21 @@ pip install -r requirements.txt
 - --format.  Output format for the table of consolidated results.  Options are text, html or markdown.  Default = text.
 ### Execution
 ```bash
-python3 test.py --nkeys 200000 --format markdown
+python3 mptest.py --nkeys 1000000 --nfields 15 --textsize 10 --numericsize 10 --format markdown
 ```
 ### Output
 Sample output for the test above.
 
-Consolidated Results - Num Keys:200000, Num Fields:10, Text Field Size:10, Numeric Field Size:10
+Consolidated Results - Num Keys:1000000, Num Fields:15, Text Field Size:10, Numeric Field Size:10
 | Index Structure       |   Object Size(b) |   Index Size(mb) |
 |:----------------------|-----------------:|-----------------:|
-| Hash Text Unsorted    |              269 |            35.45 |
-| Hash Text Sorted      |              269 |           100.3  |
-| Hash Tag              |              269 |            22.29 |
-| Hash Numeric Unsorted |              241 |            33.12 |
-| Hash Numeric Sorted   |              241 |            78.9  |
-| JSON Text Unsorted    |              290 |            35.45 |
-| JSON Text Sorted      |              290 |           100.3  |
-| JSON Tag              |              290 |            22.29 |
-| JSON Numeric Unsorted |              190 |            33.14 |
-| JSON Numeric Sorted   |              190 |            78.91 |
+| Hash Text Unsorted    |              269 |           199.13 |
+| Hash Text Sorted      |              269 |           637.82 |
+| Hash Tag              |              269 |           133.31 |
+| Hash Numeric Unsorted |              245 |           192.39 |
+| Hash Numeric Sorted   |              245 |           535.72 |
+| JSON Text Unsorted    |              290 |           199.14 |
+| JSON Text Sorted      |              290 |           637.83 |
+| JSON Tag              |              290 |           133.33 |
+| JSON Numeric Unsorted |              190 |           192.47 |
+| JSON Numeric Sorted   |              190 |           535.79 |
