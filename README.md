@@ -1,8 +1,13 @@
 # RediSearch Memory Footprint Comparisons
 
+## Blog
+https://joeywhelan.blogspot.com/2023/02/redis-hash-vs-json-memory-footprints.html
+
 ## Summary
 Tool for comparing the Redis object and index memory footprints for various scenarios.
 
+## Architecture
+![architecture](arch.jpg)
 ## Features
 - Calculates memory footprint of Redis objects and search indices for various configurable scenarios
 ## Prerequisites
