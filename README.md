@@ -42,13 +42,15 @@ Sample output for the test above.
 Consolidated Results - Num Keys:1000000, Num Fields:15, Text Field Size:10, Numeric Field Size:10
 | Index Structure       |   Object Size(b) |   Index Size(mb) |
 |:----------------------|-----------------:|-----------------:|
-| Hash Text Unsorted    |              269 |           199.13 |
-| Hash Text Sorted      |              269 |           637.82 |
-| Hash Tag              |              269 |           133.31 |
-| Hash Numeric Unsorted |              245 |           192.39 |
-| Hash Numeric Sorted   |              245 |           535.72 |
-| JSON Text Unsorted    |              290 |           199.14 |
-| JSON Text Sorted      |              290 |           637.83 |
-| JSON Tag              |              290 |           133.33 |
-| JSON Numeric Unsorted |              190 |           192.47 |
-| JSON Numeric Sorted   |              190 |           535.79 |
+| Hash Text Unsorted    |              269 |           199.15 |
+| Hash Text Sorted      |              269 |           637.84 |
+| Hash Tag Unsorted     |              269 |           133.34 |
+| Hash Tag Sorted       |              269 |           572.03 |
+| Hash Numeric Unsorted |              245 |           192.3  |
+| Hash Numeric Sorted   |              245 |           535.62 |
+| JSON Text Unsorted    |              290 |           199.13 |
+| JSON Text Sorted      |              290 |           637.82 |
+| JSON Tag Unsorted     |              290 |           133.32 |
+| JSON Tag Sorted       |              290 |           572.02 |
+| JSON Numeric Unsorted |              190 |           192.3  |
+| JSON Numeric Sorted   |              190 |           535.62 |

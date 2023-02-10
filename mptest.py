@@ -87,8 +87,10 @@ class TestSuite(object):
         print(f'Test 1 - Hash Text Unsorted: {results["Hash Text Unsorted"]}')
         results['Hash Text Sorted'] = self._test(OBJECT_TYPE.HASH, FIELD_TYPE.TEXT, True)
         print(f'Test 2 - Hash Text Sorted: {results["Hash Text Sorted"]}')
-        results['Hash Tag'] = self._test(OBJECT_TYPE.HASH, FIELD_TYPE.TAG, False)
-        print(f'Test 3 - Hash Tag: {results["Hash Tag"]}')
+        results['Hash Tag Unsorted'] = self._test(OBJECT_TYPE.HASH, FIELD_TYPE.TAG, False)
+        print(f'Test 3 - Hash Tag Unsorted: {results["Hash Tag Unsorted"]}')
+        results['Hash Tag Sorted'] = self._test(OBJECT_TYPE.HASH, FIELD_TYPE.TAG, True)
+        print(f'Test 4 - Hash Tag Sorted: {results["Hash Tag Sorted"]}')
     
         #hash sets with numeric fields
         print()
@@ -103,9 +105,9 @@ class TestSuite(object):
         with Pool(self.num_processes) as pool:
             pool.starmap(load_db, params)
         results['Hash Numeric Unsorted'] = self._test(OBJECT_TYPE.HASH, FIELD_TYPE.NUMERIC, False)
-        print(f'Test 4 - Hash Numeric Unsorted: {results["Hash Numeric Unsorted"]}')
+        print(f'Test 5 - Hash Numeric Unsorted: {results["Hash Numeric Unsorted"]}')
         results['Hash Numeric Sorted'] = self._test(OBJECT_TYPE.HASH, FIELD_TYPE.NUMERIC, True)
-        print(f'Test 5 - Hash Numeric Sorted: {results["Hash Numeric Sorted"]}')
+        print(f'Test 6 - Hash Numeric Sorted: {results["Hash Numeric Sorted"]}')
         
         #json with string fields
         print()
@@ -120,11 +122,13 @@ class TestSuite(object):
         with Pool(self.num_processes) as pool:
             pool.starmap(load_db, params)
         results['JSON Text Unsorted'] = self._test(OBJECT_TYPE.JSON, FIELD_TYPE.TEXT, False)
-        print(f'Test 6 - JSON Text Unsorted: {results["JSON Text Unsorted"]}')
+        print(f'Test 7 - JSON Text Unsorted: {results["JSON Text Unsorted"]}')
         results['JSON Text Sorted'] = self._test(OBJECT_TYPE.JSON, FIELD_TYPE.TEXT, True)
-        print(f'Test 7 - JSON Text Sorted: {results["JSON Text Sorted"]}')
-        results['JSON Tag'] = self._test(OBJECT_TYPE.JSON, FIELD_TYPE.TAG, False)
-        print(f'Test 8 - JSON Tag: {results["JSON Tag"]}')
+        print(f'Test 8 - JSON Text Sorted: {results["JSON Text Sorted"]}')
+        results['JSON Tag Unsorted'] = self._test(OBJECT_TYPE.JSON, FIELD_TYPE.TAG, False)
+        print(f'Test 9 - JSON Tag Unsorted: {results["JSON Tag Unsorted"]}')
+        results['JSON Tag Sorted'] = self._test(OBJECT_TYPE.JSON, FIELD_TYPE.TAG, True)
+        print(f'Test 10 - JSON Tag Sorted: {results["JSON Tag Sorted"]}')
         
         #json with numeric fields
         print()
@@ -183,7 +187,7 @@ class TestSuite(object):
                 case FIELD_TYPE.NUMERIC:
                     schema.append(NumericField(f'{field_prefix}_{j}', as_name=f'{TestSuite.FIELD_NAME}_{j}', sortable=sorted))
                 case FIELD_TYPE.TAG:
-                    schema.append(TagField(f'{field_prefix}_{j}', as_name=f'{TestSuite.FIELD_NAME}_{j}'))
+                    schema.append(TagField(f'{field_prefix}_{j}', as_name=f'{TestSuite.FIELD_NAME}_{j}', sortable=sorted))
                 case FIELD_TYPE.TEXT:
                     schema.append(TextField(f'{field_prefix}_{j}', as_name=f'{TestSuite.FIELD_NAME}_{j}', sortable=sorted))
         
